@@ -8,7 +8,7 @@ Pihole with docker for DNS over HTTPS via Cloudflared.
 - Connect to the Pihole interface : **172.23.0.2/admin** (172.23.0.2 is the @ip of the pihole container).  
 
 ### Update pihole admin password  
-If you have trouble with the pihole password, connect to the container ```docker-compose exec cloudflared sh ``` and run ```pihole -a -p``` then enter a new password (leave it blank if you don't want to use a password).  
+If you have trouble with the pihole password, connect to the container ```docker-compose exec pihole sh ``` and run ```pihole -a -p``` then enter a new password (leave it blank if you don't want to use a password).  
 
 ### To test if DNS over HTTPS is working
 - Inside the cloudflared container: ```dig @172.0.0.1 -p 5053 google.com```  
